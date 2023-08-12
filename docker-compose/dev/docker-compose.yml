@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  fitness-service:
+    image: javalin-template:latest
+    container_name: javalin-template
+    hostname: docker-local
+    env_file:
+      - config/service.env
+      - config/otel.env
+      - config/otel-collect.env
+    ports:
+      - "10001:10000"
+    networks:
+      - app-bridge-network
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 1G
+
+networks:
+  app-bridge-network:
+    name: app-bridge
+    external: true
