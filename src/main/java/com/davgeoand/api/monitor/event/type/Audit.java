@@ -20,12 +20,12 @@ public class Audit extends Event {
     @Override
     public Point toPoint() {
         return Point.measurement("audit")
-                .addTag("request.path", requestPath)
+                .addTag("request_path", requestPath)
                 .addTag("status", status)
                 .addTag("method", method)
                 .addField("response", response)
-                .addField("request.duration", requestDuration)
-                .addField("trace.id", traceId)
+                .addField("request_duration", requestDuration)
+                .addField("trace_id", traceId)
                 .time(time, WritePrecision.MS);
     }
 }

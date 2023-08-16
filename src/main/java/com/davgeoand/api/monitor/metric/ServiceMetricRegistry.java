@@ -1,7 +1,7 @@
 package com.davgeoand.api.monitor.metric;
 
-import com.davgeoand.api.helper.ServiceProperties;
 import com.davgeoand.api.exception.MissingPropertyException;
+import com.davgeoand.api.helper.ServiceProperties;
 import com.davgeoand.api.monitor.metric.config.ServiceInfluxConfig;
 import io.javalin.micrometer.MicrometerPlugin;
 import io.micrometer.core.instrument.Clock;
@@ -55,6 +55,10 @@ public class ServiceMetricRegistry {
 
     public static MicrometerPlugin getMicrometerPlugin() {
         return MicrometerPlugin.Companion.create(micrometerConfig -> micrometerConfig.registry = meterRegistry);
+    }
+
+    public static void addMetric(String name, int value) {
+        meterRegistry.gauge(name, value);
     }
 
 }

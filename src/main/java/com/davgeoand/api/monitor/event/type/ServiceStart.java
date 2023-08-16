@@ -19,13 +19,13 @@ public class ServiceStart extends Event {
 
     @Override
     public Point toPoint() {
-        return Point.measurement("service.start")
-                .addField("build.version", buildVersion)
-                .addField("git.branch", gitBranch)
-                .addField("git.commit.id", gitCommitId)
-                .addField("start.time", startTime)
-                .addField("service.start.duration", serviceStartDuration)
-                .addField("java.version", javaVersion)
+        return Point.measurement("service_start")
+                .addField("build_version", buildVersion)
+                .addField("git_branch", gitBranch)
+                .addField("git_commit_id", gitCommitId)
+                .addField("start_time", startTime)
+                .addField("service_start_duration", serviceStartDuration)
+                .addField("java_version", javaVersion)
                 .time(time, WritePrecision.MS);
     }
 }

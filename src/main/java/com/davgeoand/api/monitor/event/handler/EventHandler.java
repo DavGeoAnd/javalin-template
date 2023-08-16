@@ -11,4 +11,8 @@ public interface EventHandler extends Runnable {
     default void addEventToQueue(Event event) {
         eventBlockingQueue.add(event);
     }
+
+    default int queueSize() {
+        return eventBlockingQueue.size();
+    }
 }
