@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bed32e8-396d-4f32-952a-47765103109f" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/JavalinService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8bed32e8-396d-4f32-952a-47765103109f" name="Changes" comment="Deployment update&#10;- update cpu limits&#10;- changed event type to influx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/template/AppRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/ServiceRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/template/ApplicationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/helper/ServiceProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/template/JavalinApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/dev/config/otel-collect.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/config/otel-collect-nr.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/dev/config/otel.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/config/otel.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/dev/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/JavalinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/JavalinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/InfluxEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/InfluxEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/ServiceEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/ServiceEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/Audit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/Audit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/ServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/ServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/metric/ServiceMetricRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/metric/ServiceMetricRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -53,6 +60,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker-compose/dev/config" />
+      <recent name="$PROJECT_DIR$/docker-compose" />
+      <recent name="$PROJECT_DIR$/docker-compose/dev" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -80,22 +90,24 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="dev: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
+          <option name="composeProjectName" value="javalin-template" />
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose/dev/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.ServiceRunner" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.dev: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ServiceRunner" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.dev: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -116,12 +128,30 @@
       <option name="project" value="LOCAL" />
       <updated>1690673596608</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Monitoring&#10;- docker compose setup for monitoring&#10;- push metrics through global or influx registry">
+      <option name="closed" value="true" />
+      <created>1691852619412</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691852619412</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Deployment update&#10;- update cpu limits&#10;- changed event type to influx">
+      <option name="closed" value="true" />
+      <created>1691852978641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691852978641</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Monitoring&#10;- docker compose setup for monitoring&#10;- push metrics through global or influx registry" />
+    <MESSAGE value="Deployment update&#10;- update cpu limits&#10;- changed event type to influx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deployment update&#10;- update cpu limits&#10;- changed event type to influx" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/javalin_template$AppRunner.ic" NAME="AppRunner Coverage Results" MODIFIED="1690679115646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

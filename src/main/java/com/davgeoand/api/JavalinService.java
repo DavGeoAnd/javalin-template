@@ -33,6 +33,8 @@ public class JavalinService {
         log.info("Starting javalin web service");
         startServiceTime = System.currentTimeMillis();
         ServiceProperties.init("service.properties", "build.properties");
+        ServiceMetricRegistry.init();
+        ServiceEventHandler.init();
         service.start(Integer.parseInt(ServiceProperties.getProperty("service.port").orElseThrow(() -> new MissingPropertyException("service.port"))));
         log.info("Successfully started javalin web service");
     }
@@ -57,7 +59,7 @@ public class JavalinService {
 
     private void serviceMetrics() {
         log.info("Setting up service metrics");
-        ServiceMetricRegistry.init();
+        ServiceMetricRegistry.addMetric("service.event.queue.size", ServiceEventHandler.getQueueSize());
         service.updateConfig((javalinConfig -> {
             javalinConfig.plugins.register(ServiceMetricRegistry.getMicrometerPlugin());
         }));
@@ -66,7 +68,6 @@ public class JavalinService {
 
     private void serviceEvents() {
         log.info("Setting up service events");
-        ServiceEventHandler.init();
         eventServiceStart();
         eventAudit();
         log.info("Successfully set up service events");

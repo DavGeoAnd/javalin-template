@@ -36,4 +36,8 @@ public class ServiceEventHandler {
         event.setTime(Instant.now());
         eventHandler.addEventToQueue(event);
     }
+
+    public static int getQueueSize(){
+        return eventHandler.queueSize();
+    }
 }
