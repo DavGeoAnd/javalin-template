@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8bed32e8-396d-4f32-952a-47765103109f" name="Changes" comment="Deployment update&#10;- update cpu limits&#10;- changed event type to influx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/dev/config/otel-collect.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/config/otel-collect-nr.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/dev/config/otel.env" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/config/otel.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose/dev/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/JavalinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/JavalinService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/InfluxEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/InfluxEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/ServiceEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/handler/ServiceEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/Audit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/Audit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/ServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/event/type/ServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/metric/ServiceMetricRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davgeoand/api/monitor/metric/ServiceMetricRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +42,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/davidgandalcio/Development/Apps/springboot-template&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/davidgandalcio/Development/Apps/springboot-template",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docker-compose/dev/config" />
@@ -146,6 +139,17 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
