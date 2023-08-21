@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bed32e8-396d-4f32-952a-47765103109f" name="Changes" comment="Deployment update&#10;- update cpu limits&#10;- changed event type to influx">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/dev/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/dev/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8bed32e8-396d-4f32-952a-47765103109f" name="Changes" comment="Github Actions&#10;- update username variable" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691852978641</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Github Actions&#10;- change docker service name&#10;- use chicago timezone&#10;- update network&#10;- update opentelemetry version">
+      <option name="closed" value="true" />
+      <created>1692583481848</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692583481848</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Github Actions&#10;- update username variable">
+      <option name="closed" value="true" />
+      <created>1692583805111</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692583805111</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,7 +166,9 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Monitoring&#10;- docker compose setup for monitoring&#10;- push metrics through global or influx registry" />
     <MESSAGE value="Deployment update&#10;- update cpu limits&#10;- changed event type to influx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deployment update&#10;- update cpu limits&#10;- changed event type to influx" />
+    <MESSAGE value="Github Actions&#10;- change docker service name&#10;- use chicago timezone&#10;- update network&#10;- update opentelemetry version" />
+    <MESSAGE value="Github Actions&#10;- update username variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Github Actions&#10;- update username variable" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/javalin_template$AppRunner.ic" NAME="AppRunner Coverage Results" MODIFIED="1690679115646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
